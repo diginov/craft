@@ -1,0 +1,15 @@
+{% switch emailKey %}
+
+  {% case "account_activation" %}
+    {% include "_emails/base.twig" %}
+
+  {% case "forgot_password" %}
+    {% include "_emails/base.twig" %}
+
+  {% case "verify_new_email" %}
+    {% include "_emails/base.twig" %}
+
+  {% default %}
+    {% include "_emails/base.twig" %}
+
+{% endswitch %}

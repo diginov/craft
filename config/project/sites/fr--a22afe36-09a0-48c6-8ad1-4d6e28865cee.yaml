@@ -1,0 +1,9 @@
+baseUrl: $CRAFT_WEB_URL_FR
+enabled: '1'
+handle: fr
+hasUrls: true
+language: fr-CA
+name: Français
+primary: false
+siteGroup: 06becd04-6baf-4b43-8769-ec641bce728b # Default
+sortOrder: 2

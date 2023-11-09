@@ -1,0 +1,19 @@
+{%- header "Content-Type: text/plain" -%}
+{%- cache globally using key craft.app.request.pathInfo for 1 hour -%}
+
+{%- if craft.app.config.env != "production" -%}
+
+User-agent: *
+Disallow: /
+
+Sitemap: {{ url("sitemap.xml") }}
+
+{%- else -%}
+
+User-agent: *
+Disallow:
+
+Sitemap: {{ url("sitemap.xml") }}
+
+{%- endif -%}
+{%- endcache -%}

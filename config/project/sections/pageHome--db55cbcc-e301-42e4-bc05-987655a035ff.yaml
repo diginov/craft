@@ -1,0 +1,29 @@
+defaultPlacement: end
+enableVersioning: false
+handle: pageHome
+name: 'Page - Home'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - Page
+      -
+        - urlFormat
+        - '{{ getPreviewUrl(object) }}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  a22afe36-09a0-48c6-8ad1-4d6e28865cee: # Français
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: __home__
+  bedcac84-ccd3-4475-8a12-66179d425eaf: # English
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: __home__
+type: single

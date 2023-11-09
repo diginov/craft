@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@craft/*": ["../../../../vendor/craftcms/cms/src/web/assets/cp/dist/*"],
+      "@garnish/*": ["../../../../vendor/craftcms/cms/src/web/assets/garnish/dist/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

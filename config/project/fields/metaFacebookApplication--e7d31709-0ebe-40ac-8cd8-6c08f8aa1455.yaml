@@ -1,0 +1,19 @@
+columnSuffix: ppvoohsq
+contentColumnType: text
+fieldGroup: 51825947-7775-477b-b89c-3a96a9322520 # Meta
+handle: metaFacebookApplication
+instructions: 'Unique identifier for the Facebook application.'
+name: 'Facebook Application'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: true
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: '123456789012345'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

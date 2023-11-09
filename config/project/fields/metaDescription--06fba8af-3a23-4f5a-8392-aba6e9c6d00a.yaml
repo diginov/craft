@@ -1,0 +1,19 @@
+columnSuffix: azjtjemh
+contentColumnType: text
+fieldGroup: 51825947-7775-477b-b89c-3a96a9322520 # Meta
+handle: metaDescription
+instructions: 'Description used by search engines and social media.'
+name: Description
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 300
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

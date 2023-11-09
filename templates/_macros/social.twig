@@ -1,0 +1,43 @@
+{# Google Analytics #}
+{%- macro googleAnalytics() -%}
+
+  {%- set global = craft.globalSets().handle('globalMeta').one() -%}
+  {%- if craft.app.config.env == 'production' and global.metaGoogleAnalytics is defined and global.metaGoogleAnalytics is not empty -%}
+
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ global.metaGoogleAnalytics }}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '{{ global.metaGoogleAnalytics }}');
+</script>
+
+  {%- endif -%}
+
+{%- endmacro -%}
+
+{# Facebook Application #}
+{%- macro facebookApplication() -%}
+
+  {%- set global = craft.globalSets().handle('globalMeta').one() -%}
+  {%- if global.metaFacebookApplication is defined and global.metaFacebookApplication is not empty -%}
+
+<script>
+window.fbAsyncInit = function() {
+  FB.init({ appId: '{{ global.metaFacebookApplication }}', xfbml: true, version: 'v18.0' });
+};
+</script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/{{ craft.app.language == 'fr' ? 'fr-CA' : 'en-US' }}/sdk.js"></script>
+
+  {%- endif -%}
+
+{%- endmacro -%}
+
+{# Micro Data #}
+{%- macro microData() -%}
+
+  {{ craft.site.meta.website() }}
+  {{ craft.site.meta.webpage() }}
+  {{ craft.site.meta.breadcrumb() }}
+
+{%- endmacro -%}

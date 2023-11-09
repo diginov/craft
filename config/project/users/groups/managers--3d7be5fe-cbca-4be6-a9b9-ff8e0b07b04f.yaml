@@ -1,0 +1,16 @@
+description: null
+handle: managers
+name: Managers
+permissions:
+  - accesscp
+  - accesssitewhensystemisoff
+  - administrateusers
+  - 'assignusergroup:3d7be5fe-cbca-4be6-a9b9-ff8e0b07b04f' # Managers
+  - assignuserpermissions
+  - deleteusers
+  - 'editsite:a22afe36-09a0-48c6-8ad1-4d6e28865cee' # Français
+  - 'editsite:bedcac84-ccd3-4475-8a12-66179d425eaf' # English
+  - editusers
+  - impersonateusers
+  - moderateusers
+  - registerusers

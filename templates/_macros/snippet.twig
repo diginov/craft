@@ -1,0 +1,34 @@
+{# Language Switcher #}
+{%- macro languageSwitcher() -%}
+
+  {% set currentSite = craft.app.sites.currentSite %}
+  {% set currentElement = craft.app.urlManager.matchedElement %}
+
+  {% set otherSite = null %}
+  {% set otherElement = null %}
+
+  {% for site in craft.app.sites.allSites |without(currentSite) %}
+    {% set otherSite = site %}
+  {% endfor %}
+
+  {% if currentElement is empty %}
+    {% set currentElement = entry is defined ? entry : category is defined ? category : null %}
+  {% endif %}
+
+  {% if currentElement is not empty %}
+    {% set otherElement = craft.app.elements.elementById(currentElement.id, currentElement.className, otherSite.id) %}
+  {% endif %}
+
+  {% if otherElement is empty %}
+    {% set otherElement = craft.entries.section('pageHome').site(otherSite).one() %}
+  {% endif %}
+
+  {% set queryString = craft.app.request.queryStringWithoutPath %}
+
+  {% if queryString is not empty %}
+    {% set queryString = '?' ~ queryString %}
+  {% endif %}
+
+  <a href="{{ otherElement.url }}{{ queryString }}">{{ otherSite.name }}</a>
+
+{%- endmacro -%}

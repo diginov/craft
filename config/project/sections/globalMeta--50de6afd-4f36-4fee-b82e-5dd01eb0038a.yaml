@@ -1,0 +1,17 @@
+defaultPlacement: end
+enableVersioning: false
+handle: globalMeta
+name: 'Global - Meta'
+propagationMethod: all
+siteSettings:
+  a22afe36-09a0-48c6-8ad1-4d6e28865cee: # Français
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  bedcac84-ccd3-4475-8a12-66179d425eaf: # English
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single

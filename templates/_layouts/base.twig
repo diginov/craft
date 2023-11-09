@@ -1,0 +1,52 @@
+{%- import "_macros/social.twig" as social -%}
+
+<!doctype html>
+<html dir="ltr" lang="{{ craft.app.language |slice(0,2) }}">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta name="application-name" content="{{ systemName }}">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url('icons/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url('icons/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url('icons/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url('site.webmanifest') }}">
+  <link rel="mask-icon" href="{{ url('icons/safari-pinned-tab.svg') }}" color="#e5422b">
+  <link rel="shortcut icon" href="{{ url('icons/favicon.ico') }}">
+  <meta name="msapplication-TileColor" content="#f1f5fd">
+  <meta name="msapplication-config" content="{{ url('browserconfig.xml') }}">
+  <meta name="theme-color" content="#f1f5fd">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+
+  <link rel="stylesheet" href="{{ rev("/assets/app.css") }}">
+
+  {% hook "seomateMeta" %}
+
+  {{ social.googleAnalytics() }}
+  {{ social.facebookApplication() }}
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+<body>
+
+  {% include "_layouts/header.twig" %}
+
+  {% block main %}
+    <p>If you see me, you haven’t set your <code>{% verbatim %}{% block main %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+  {% endblock %}
+
+  {% include "_layouts/footer.twig" %}
+
+  {{ social.microData() }}
+
+  <script src="{{ rev("/assets/app.js") }}"></script>
+
+</body>
+</html>

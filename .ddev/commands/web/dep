@@ -1,0 +1,14 @@
+#!/bin/bash
+
+## Description: Run deployer CLI command
+## Usage: dep [flags] [args]
+## Example: "ddev dep deploy <target>"
+
+if ssh-add -l >/dev/null
+then
+    /var/www/html/vendor/bin/dep "$@"
+else
+    printf "\033[0;33mPlease 'ddev auth ssh' before running this command.\n"
+fi
+
+# Deployer must be installed via 'ddev composer require --dev deployer/deployer:^7', otherwise this won't work.

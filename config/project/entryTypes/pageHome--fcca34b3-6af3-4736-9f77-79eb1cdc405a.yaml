@@ -1,0 +1,46 @@
+fieldLayouts:
+  3a538587-4de7-422d-af60-8b29e1cf7d95:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 69ba4a77-5839-467c-95ee-fbaff7f3cee9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Contenu
+        uid: 331491be-1305-40f4-a0e5-f89a192f8d19
+        userCondition: null
+handle: pageHome
+hasTitleField: true
+name: 'Page - Home'
+section: db55cbcc-e301-42e4-bc05-987655a035ff # Page - Home
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

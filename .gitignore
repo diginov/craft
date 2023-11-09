@@ -1,0 +1,27 @@
+# Craft
+/.env
+
+# Composer
+/vendor
+
+# Node
+/node_modules/
+/npm-debug.log
+
+# Ide
+/.idea
+/.vscode
+
+# Archive
+*.sql
+*.gz
+*.zip
+
+# Mac
+.DS_Store
+.DS_Store?
+._*
+
+# Windows
+[Dd]esktop.ini
+Thumbs.db

@@ -1,0 +1,19 @@
+columnSuffix: rzsfhciy
+contentColumnType: text
+fieldGroup: 51825947-7775-477b-b89c-3a96a9322520 # Meta
+handle: metaGoogleAnalytics
+instructions: 'Unique Google Analytics profile identifier.'
+name: 'Google Analytics'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: true
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: G-1234567890
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

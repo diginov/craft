@@ -1,0 +1,20 @@
+<form method="post">
+  {{ actionInput('site/build/run-webhook') }}
+  {{ csrfInput() }}
+  <p>{{ "This will launch the task which will publish the changes made to your website to all servers over the network." |t }}</p>
+  <p>{{ "Please allow about <strong>{minutes} minute{plural}</strong> for the changes to be available network-wide." |t({ minutes: minutes, plural: minutes > 1 ? 's' }) |raw }}</p>
+  {% if badge is not empty %}
+    <p><img id="build-badge" src="{{ badge }}" alt="{{ "Publishing status badge" |t }}"></p>
+    <p>{{ "The above badge displays the current status of the publish task." |t }}</p>
+  {% endif %}
+  <button type="submit" class="btn submit">{{ "Publish" |t }}</button>
+</form>
+
+{% if badge is not empty %}
+  <script>
+    setInterval(function() {
+      var image = document.getElementById('build-badge');
+      image.src = '{{ badge }}{{ '?' in badge ? '&v=' : '?v=' }}' + Math.random();
+    }, 5000);
+  </script>
+{% endif %}

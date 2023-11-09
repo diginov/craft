@@ -1,0 +1,206 @@
+dateModified: 1699472296
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: true
+      key: '*'
+      tableAttributes:
+        - section
+        - postDate
+        - expiryDate
+        - author
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: singles
+      tableAttributes:
+        - dateUpdated
+        - uri
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: settings
+      tableAttributes:
+        - dateUpdated
+      type: native
+  craft\elements\User:
+    -
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - fullName
+        - email
+        - dateCreated
+        - lastLoginDate
+      type: native
+    -
+      key: admins
+      type: native
+    -
+      heading: 'Account Type'
+      type: heading
+    -
+      key: credentialed
+      type: native
+    -
+      key: inactive
+      type: native
+    -
+      heading: Groupes
+      type: heading
+    -
+      key: 'group:3d7be5fe-cbca-4be6-a9b9-ff8e0b07b04f' # Managers
+      type: native
+email:
+  fromEmail: example@my-craft-project.com
+  fromName: 'Craft CMS Starter'
+  replyToEmail: null
+  template: _emails/craft.twig
+  transportSettings:
+    host: $MAILPIT_SMTP_HOSTNAME
+    password: ''
+    port: $MAILPIT_SMTP_PORT
+    useAuthentication: '0'
+    username: ''
+  transportType: craft\mail\transportadapters\Smtp
+fs:
+  localMeta:
+    hasUrls: true
+    name: 'Meta - Local'
+    settings:
+      path: '@webroot/files/meta'
+    type: craft\fs\Local
+    url: '@web/files/meta'
+  localPage:
+    hasUrls: true
+    name: 'Page - Local'
+    settings:
+      path: '@webroot/files/page'
+    type: craft\fs\Local
+    url: '@web/files/page'
+meta:
+  __names__:
+    3c4d780a-c74a-499b-96e9-9aee0889961e: 'Google Analytics' # Google Analytics
+    3d7be5fe-cbca-4be6-a9b9-ff8e0b07b04f: Managers # Managers
+    4ae3e846-d28a-4662-9242-6f1f47b07658: Meta # Meta
+    5c998a99-1535-46ad-acc7-290eab3e54df: Image # Image
+    6a512672-53cb-45c5-adc9-a8d6b3fb6dcb: 'Global - Meta' # Global - Meta
+    06becd04-6baf-4b43-8769-ec641bce728b: Default # Default
+    6d06c1db-f684-4286-b898-3bd4fba50001: Simple # Simple
+    06fba8af-3a23-4f5a-8392-aba6e9c6d00a: Description # Description
+    30bee67e-b6eb-4133-a121-e58a5ffa1cd3: Page # Page
+    50de6afd-4f36-4fee-b82e-5dd01eb0038a: 'Global - Meta' # Global - Meta
+    95bf71c2-75d4-4454-babd-75b9e274b8cf: Common # Common
+    290df891-77ae-4ec7-94f7-e9ee2940c49a: 'Contact Form' # Contact Form
+    51825947-7775-477b-b89c-3a96a9322520: Meta # Meta
+    91945924-2538-4f61-a4e0-bdcaaaf7e810: Title # Title
+    a22afe36-09a0-48c6-8ad1-4d6e28865cee: Français # Français
+    aec884a2-ccc0-469c-abf8-3feb3a94babb: New # New
+    bedcac84-ccd3-4475-8a12-66179d425eaf: English # English
+    db55cbcc-e301-42e4-bc05-987655a035ff: 'Page - Home' # Page - Home
+    e7d31709-0ebe-40ac-8cd8-6c08f8aa1455: 'Facebook Application' # Facebook Application
+    f63e7fb8-70b7-4556-9099-751c2bd98bb7: 'Public Schema' # Public Schema
+    fcca34b3-6af3-4736-9f77-79eb1cdc405a: 'Page - Home' # Page - Home
+plugins:
+  amazon-ses:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '2.0'
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  colour-swatches:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.4.3
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: XXXXXXXXXXXXXXXXXXXXXXXX
+    schemaVersion: 2.0.11
+    settings:
+      ajaxTimeout: 10
+      alertEmails: null
+      defaultDateDisplayType: calendar
+      defaultDateTime: null
+      defaultDateValueOption: ''
+      defaultEmailTemplate: ''
+      defaultFileUploadVolume: ''
+      defaultFormTemplate: ''
+      defaultInstructionsPosition: verbb\formie\positions\AboveInput
+      defaultLabelPosition: verbb\formie\positions\AboveInput
+      defaultPage: forms
+      emptyValuePlaceholder: 'No response.'
+      enableBackSubmission: true
+      enableCsrfValidationForGuests: true
+      enableLargeFieldStorage: false
+      enableUnloadWarning: true
+      includeDraftElementUsage: false
+      includeRevisionElementUsage: false
+      maxIncompleteSubmissionAge: 30
+      maxSentNotificationsAge: 30
+      pdfPaperOrientation: portrait
+      pdfPaperSize: letter
+      pluginName: Forms
+      queuePriority: null
+      saveSpam: true
+      sendEmailAlerts: false
+      sentNotifications: true
+      spamBehaviour: showSuccess
+      spamBehaviourMessage: ''
+      spamEmailNotifications: false
+      spamKeywords: ''
+      spamLimit: 500
+      useQueueForIntegrations: true
+      useQueueForNotifications: true
+      validateCustomTemplates: true
+  image-resizer:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  sentry-logger:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seomate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+system:
+  edition: pro
+  live: true
+  name: 'Craft CMS Starter'
+  retryDuration: null
+  schemaVersion: 4.5.3.0
+  timeZone: America/Toronto
